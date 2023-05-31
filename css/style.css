@@ -99,7 +99,7 @@ p.about-me {
 .grid {
     display:grid;
     gap: 26px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 6%;
     margin-bottom: 50px;
 }
@@ -125,6 +125,18 @@ p.about-me {
     display: inline-block;
     color:gray;
 
+}
+.github-icon a {
+    margin: 10px;
+    color:#24292e;
+    border-bottom: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+.github-icon img {
+    margin-top: 10px;
+    height:50%;
+    width: 50%;
 }
 
 /* フッター
