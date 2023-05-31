@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+body {
+    width: 100%;
+}
+
+/* HEADER
+------------------- */
+.logo {
+    width: 120px;
+    margin-top: 12px;
+}
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 24px;
+}
+.main-nav li {
+    margin-left: 20px;
+}
+.main-nav a {
+    color: #24292e;
+}
+.main-nav a:hover {
+    color:#dcdcdc
+}
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* HOME
+------------------- */
+.wrapper {
+    text-align: center;
+}
+.main-visual img {
+    height: auto;
+    object-fit: cover;
+      
+}
+.article {
+    margin-top: 80px;
+}
+.about {
+    margin-top: 70px;
+    padding-top: 4px;
+    font-size: 0.885rem;
+    position: relative;
+    text-align: left;
+}
+.article a {
+    margin-top: 90px;
+    font-size: 2rem;
+    border-bottom: 1px solid #383e44;
+    padding-bottom: 8px;
+    font-weight: bolder;
+    text-align: center;
+}
+#portfolio {
+    text-align: center;
+}
+
+.profile-pic img {
+    border-radius: 30%;
+    height: 100px;
+    width: 100px; 
+    position: absolute;
+    left:320px;
+    
+    
+}
+.about-name {
+    justify-content:flex-start;
+    margin-left: 40%;
+    font-size: 0.885rem;
+}
+p.about-me {    
+    font-size: 0.85rem;
+    justify-content:flex-start;
+    margin-left: 40%;
+}
+.grid {
+    display:grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+.item img {
+    width: 300px;
+    margin-bottom: 10px;
+}
+.item h3 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+.item p {
+    font-size: 0.95rem;
+}
+.mail img {
+    width:1rem
+}
+.mail a {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: none;
+    display: inline-block;
+    color:gray;
+
+}
+
+/* フッター
+------------------- */
+footer p {
+    font-size: 0.0875rem;
+    margin: 100px 0;
+}
+/* モバイル版
+------------------------*/
+@media (max-width: 600px) {
+    /* HOME */
+    .profile-pic img {
+        position: absolute;
+        left: 40%;
+        top: 10px;
+    }
+    .about-name {
+        margin-top: 110px;
+        margin-left: 1%;
+    }
+    .grid {
+        display:grid;
+        gap: 5px;
+        grid-template-columns: 1fr;
+        margin-top: 6%;
+        margin-bottom: 50px;
+    }
+
+
+}
