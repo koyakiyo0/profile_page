@@ -15,10 +15,7 @@ body {
 
 /* HEADER
 ------------------- */
-.logo {
-    width: 120px;
-    margin-top: 12px;
-}
+
 .main-nav {
     display: flex;
     list-style: none;
@@ -36,6 +33,12 @@ body {
 .page-header {
     display: flex;
     justify-content: space-between;
+}
+.page-header a {
+    color: #24292e;
+}
+.page-header a:hover {
+    color:#dcdcdc
 }
 .wrapper {
     max-width: 1200px;
