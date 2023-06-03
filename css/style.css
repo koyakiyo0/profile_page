@@ -51,12 +51,12 @@ body {
     text-align: center;
 }
 .main-visual img {
-    height: auto;
+    height: 640px;
     object-fit: cover;
       
 }
 .article {
-    margin-top: 80px;
+    margin-top: 120px;
 }
 .about {
     margin-top: 70px;
@@ -64,6 +64,12 @@ body {
     font-size: 0.885rem;
     position: relative;
     text-align: left;
+}
+.article img {
+    margin-top: 20px;
+    height: 300px;
+    object-fit: cover;
+      
 }
 .article a {
     margin-top: 90px;
@@ -115,7 +121,9 @@ p.about-me {
     font-size: 0.95rem;
 }
 .mail img {
-    width:1rem
+    height:1rem;
+    width:1rem;
+    
 }
 .mail a {
     font-size: 1.5rem;
