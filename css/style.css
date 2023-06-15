@@ -84,7 +84,8 @@ body {
 }
 
 .profile-pic img {
-    border-radius: 30%;
+    border-radius: 50%;
+    overflow: hidden;
     height: 100px;
     width: 100px; 
     position: absolute;
