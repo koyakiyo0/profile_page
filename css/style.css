@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* 共通部分 */
 html {
     font-size: 100%;
@@ -20,6 +21,7 @@ body {
     display: flex;
     list-style: none;
     margin-top: 24px;
+    justify-content: right;
 }
 .main-nav li {
     margin-left: 20px;
@@ -31,20 +33,70 @@ body {
     color:#dcdcdc
 }
 .page-header {
+    width: 100%;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    opacity: 0.5;
 }
 .page-header a {
     color: #24292e;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-color .25s;
 }
 .page-header a:hover {
-    color:#dcdcdc
+    color:#000;
+    border-bottom: 2px solid #333;
 }
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 4%;
 }
+
+/* coffee */
+
+.coffee {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.coffee > strong {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 120px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+}
+.coffee > video {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: 115%;
+}
+
+.coffee-particle {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* HOME
 ------------------- */
 .wrapper {
@@ -147,32 +199,252 @@ p.about-me {
     height:50%;
     width: 50%;
 }
+/*.form {
+    background-color: #bbb;
+} */
+
+.button {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    background-color: black;
+    text-align: center;
+    padding: 15px 60px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 #bbb;
+    transition: box-shadow .25s;
+}
+.button:hover {
+    box-shadow: 0 0 0 #bbb;
+}
+
+/* contact */
+
+
+.select {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid;
+    min-width: 500px;
+}
+.input {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid;
+    min-width: 500px;
+}
+
+
+.radio {
+    margin: 0 10px;
+    padding: 10px;
+}
+
+input.gender {
+    margin-right: 5px;
+}
+
+.textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid;
+    min-width: 500px;
+    min-height: 100px;
+}
+ label, input, textarea, select, button {
+    cursor: pointer;
+ }
+
+.form-table {
+    margin: 0 auto;
+}
+
+.form-table th {
+    padding: 5px;
+    text-align: left; 
+}
+
+.form-table td {
+    padding: 5px;
+    text-align: left; 
+    
+}
+
+
+
+/* works */
+
+.works {
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+}
+.works > img {
+    margin: 0 15px;
+    width: 150px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+
 
 /* フッター
 ------------------- */
 footer p {
     font-size: 0.0875rem;
-    margin: 100px 0;
+    padding: 10px 0;
+    text-align: center;
 }
+
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+.footer-map {
+    margin: 0;
+    padding: 40px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-map > iframe {
+    width: 60%;
+}
+
+.footer-mapinfo {
+    width: 40%;
+    padding: 15px;
+}
+
+.footer-maplogo {
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.footer-maplogo > svg {
+    fill: transparent;
+    margin-right: 10px;
+}
+
+.footer-mapaddress {
+    font-style: normal;
+}
+
+.footer-mapaddress > a {
+    color: #fff;
+    
+}
+
+.footer-line {
+    color: #444;
+}
+
+.footer-copy {
+    display: block;
+    text-align: center;
+
+}
+
+
 /* モバイル版
 ------------------------*/
-@media (max-width: 600px) {
+@media screen and (max-width: 768px) {
     /* HOME */
+
+    .body {
+        background-color: #000;
+    }
+
+    .coffee > strong {
+        font-size: 40px;
+    }
+
+    .page-header .coffee {
+        width: 100%;
+        height: auto;
+    
+    }
+  
     .profile-pic img {
-        position: absolute;
-        left: 40%;
-        top: 10px;
+        min-width: 60px;
+        display: inline-box;
+        margin: 0 auto;
+        position: relative;
     }
     .about-name {
-        margin-top: 110px;
-        margin-left: 1%;
+        margin: 0;
+    }
+
+    .about-name h3 p {
+        position: absolute;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+        
+        
     }
     .grid {
         display:grid;
-        gap: 5px;
+        gap: 20px;
         grid-template-columns: 1fr;
-        margin-top: 6%;
-        margin-bottom: 50px;
+        margin-top: 8%;
+        margin-bottom: 20px;   
+    }
+
+    .github-icon img {
+        height: 5%;
+        width: 5%;
+    }
+
+    img {
+        min-width: 600px;
+        
+        margin: 0 auto;
+        
+    }
+    .works {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .coffee > video {
+        height: 100%;
+        width: 200%;
+    }
+    .wrapper {
+        min-width: 600px;
+        margin: 10 0;
+        padding: 0;
+    }
+    .article > a{
+        display: block;
+        text-align: center;
+        margin: 0 20px;
+        padding: 0;
+    }
+    .github-icon img {
+        margin-top: 10px;
+        height:5%;
+        width: 5%;
+    }
+    .mail img{
+        width: 0.3vw;
+        height: 0.5vhx;
+    }
+    .footer-map {
+        padding: 15px;
+        display: block;
+    }
+    .footer-map > iframe {
+        width: 100%;
+        height: 200px;
+    }
+    .footer-mapinfo {
+        width: 100%;
     }
 
 
